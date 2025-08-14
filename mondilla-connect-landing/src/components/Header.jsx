@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa6";
-import { IoMdClose } from "react-icons/io";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="bg-[var(--background)] w-full">
+    <div className="bg-[var(--background)] w-full border-b border-gray-200 ">
       <div className="flex flex-row justify-between items-center  p-3">
         <span>
           <img src="logo.png" alt="Logo" width={120} />
@@ -32,21 +31,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <nav className="md:hidden flex justify-center items-center p-4">
-          <button
-            className="cursor-pointer hover:text-gray-500"
+          <HamburgerMenu 
+            isOpen={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <FaBars />
-          </button>
+            className="text-gray-700 hover:text-gray-900"
+          />
             {menuOpen && (
-                <div className="absolute top-0 right-0 bg-white shadow-lg p-4">
-                <button
-                    className="absolute top-2 right-2 cursor-pointer hover:text-gray-500"
+                <div className="absolute top-0 right-0 bg-[var(--background)] shadow-lg p-4 rounded-lg border border-gray-200 min-w-48 z-50 transform transition-all duration-300 ease-in-out">
+                <HamburgerMenu 
+                    isOpen={menuOpen}
                     onClick={() => setMenuOpen(false)}
-                >
-                    <IoMdClose />
-                </button>
-                <ul className="flex flex-col space-y-2">
+                    className="absolute top-2 right-2 text-gray-700 hover:text-gray-900"
+                />
+                <ul className="flex flex-col space-y-3 mt-8">
                     <li>
                     <a href="#home">Home</a>
                     </li>
