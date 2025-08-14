@@ -1,11 +1,12 @@
 import React from 'react';
 import './css/index.css'
+import Header from './components/Header';
 
 function App() {
   return (
-    <>
-      <p className="bg-red-400">Hello world</p>
-    </>
+    <div className='bg-[var(--background)]  flex items-center '>
+      <Header />
+    </div>
   );
 }
 
