@@ -29,29 +29,29 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10">
+    <div className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8 lg:mb-12">
-          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3 dark:text-white">
             Everything your team needs
           </h2>
-          <p className="text-gray-600 text-sm lg:text-base xl:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base xl:text-lg max-w-2xl mx-auto">
             Plan, discuss, and ship in one place.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c]  dark:text-white">
           {features.map((feature) => (
-            <div 
-              key={feature.id} 
-              className="bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+            <div
+              key={feature.id}
+              className="bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 dark:bg-[#141416] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
             >
               {/* Icon Container */}
               <div className="mb-6">
-                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300">
-                  <span className="text-blue-600 text-xl lg:text-2xl group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300 dark:bg-[#0f1724]">
+                  <span className="text-blue-600 text-xl lg:text-2xl group-hover:scale-110 transition-transform duration-300 ">
                     {feature.icon}
                   </span>
                 </div>
@@ -59,16 +59,16 @@ const Features = () => {
 
               {/* Content */}
               <div className="space-y-3">
-                <h3 className="text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-lg lg:text-xl dark:text-white font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>
 
               {/* Learn More Link */}
-              <div className="mt-6 pt-4 border-t border-gray-100">
+              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-800">
                 <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm lg:text-base flex items-center group-hover:translate-x-1 transition-all duration-300">
                   Learn more
                   <svg 
@@ -91,15 +91,15 @@ const Features = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center mt-12 lg:mt-16">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 lg:p-8 border border-blue-100">
-            <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-2">
+        <div className="text-center mt-12 lg:mt-16 dark:bg-[#141416]">
+          <div className=" rounded-2xl p-6 lg:p-8 border dark:border-gray-800 border-blue-100  dark:bg-[#141416]">
+            <h3 className="text-lg dark:text-white lg:text-xl font-bold text-gray-900 mb-2">
               Ready to get started?
             </h3>
-            <p className="text-gray-600 text-sm lg:text-base mb-6">
+            <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base mb-6">
               Join thousands of teams already using Mondilla Connect
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base">
+            <button className="bg-blue-500 hover:bg-blue-600 dark:text-black text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base">
               Start Free Trial
             </button>
           </div>

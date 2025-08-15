@@ -2,24 +2,24 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
-    <div className='bg-[var(--background)] px-4 py-10 lg:py-16'>
+    <div className='bg-[var(--background)] px-4 py-10 lg:py-16 dark:bg-[#0b0b0c]'>
       <div className='max-w-4xl mx-auto'>
         <div className='text-center mb-8 lg:mb-12'>
-          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-2'>Contact us</h3>
-          <p className='text-gray-600 text-sm lg:text-base'>Have questions? We're here to help.</p>
+          <h3 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-2 dark:text-white'>Contact us</h3>
+          <p className='text-gray-600 text-sm lg:text-base dark:text-gray-400'>Have questions? We're here to help.</p>
         </div>
         
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>
           {/* Contact Form */}
           <div className='order-2 lg:order-1'>
-            <form className='bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100'>
+            <form className='bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 dark:bg-[#141416]'>
               <div className='space-y-6'>
                 <div>
-                  <label className='block text-sm font-semibold text-gray-700 mb-2' htmlFor='name'>
+                  <label className='block text-sm font-semibold text-gray-700 mb-2 dark:text-white' htmlFor='name'>
                     Name *
                   </label>
                   <input 
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm lg:text-base' 
+                    className='w-full dark:border-gray-800 dark:text-white px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm lg:text-base' 
                     type='text' 
                     id='name'
                     placeholder='Enter your full name'
@@ -27,11 +27,11 @@ const ContactForm = () => {
                 </div>
                 
                 <div>
-                  <label className='block text-sm font-semibold text-gray-700 mb-2' htmlFor='email'>
+                  <label className='block dark:text-white text-sm font-semibold text-gray-700 mb-2' htmlFor='email'>
                     Email *
                   </label>
                   <input 
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm lg:text-base' 
+                    className='w-full dark:border-gray-800 dark:text-white px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm lg:text-base' 
                     type='email' 
                     id='email'
                     placeholder='Enter your email address'
@@ -39,11 +39,11 @@ const ContactForm = () => {
                 </div>
                 
                 <div>
-                  <label className='block text-sm font-semibold text-gray-700 mb-2' htmlFor='message'>
+                  <label className='block dark:text-white text-sm font-semibold text-gray-700 mb-2' htmlFor='message'>
                     Message *
                   </label>
                   <textarea 
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-none text-sm lg:text-base' 
+                    className='w-full dark:border-gray-800 dark:text-white px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-none text-sm lg:text-base' 
                     id='message' 
                     rows='5'
                     placeholder='Tell us how we can help you...'
@@ -51,7 +51,7 @@ const ContactForm = () => {
                 </div>
                 
                 <button 
-                  className='w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base' 
+                  className='w-full bg-blue-500 dark:text-black hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base' 
                   type='submit'
                 >
                   Send Message
@@ -62,8 +62,8 @@ const ContactForm = () => {
           
           {/* Contact Information */}
           <div className='order-1 lg:order-2'>
-            <div className='bg-white rounded-xl shadow-lg border border-gray-100 p-6 lg:p-8 h-fit'>
-              <h4 className='text-lg lg:text-xl font-bold text-gray-900 mb-6'>Get in touch</h4>
+            <div className='bg-white rounded-xl shadow-lg border border-gray-100 p-6 lg:p-8 h-fit dark:bg-[#141416] dark:border-gray-800'>
+              <h4 className='text-lg lg:text-xl font-bold text-gray-900 mb-6 dark:text-white'>Get in touch</h4>
               
               <div className='space-y-6'>
                 <div className='flex items-start space-x-4'>
@@ -73,8 +73,8 @@ const ContactForm = () => {
                     </svg>
                   </div>
                   <div>
-                    <h5 className='font-semibold text-gray-900 text-sm lg:text-base'>Email</h5>
-                    <p className='text-gray-600 text-sm lg:text-base'>support@mondilla.com</p>
+                    <h5 className='font-semibold text-gray-900 text-sm lg:text-base dark:text-white'>Email</h5>
+                    <p className='text-gray-600 text-sm lg:text-base dark:text-gray-400'>support@mondilla.com</p>
                   </div>
                 </div>
                 
@@ -85,8 +85,8 @@ const ContactForm = () => {
                     </svg>
                   </div>
                   <div>
-                    <h5 className='font-semibold text-gray-900 text-sm lg:text-base'>Phone</h5>
-                    <p className='text-gray-600 text-sm lg:text-base'>+1 (555) 123-4567</p>
+                    <h5 className='font-semibold text-gray-900 text-sm lg:text-base dark:text-white'>Phone</h5>
+                    <p className='text-gray-600 text-sm lg:text-base dark:text-gray-400'>+1 (555) 123-4567</p>
                   </div>
                 </div>
                 
@@ -98,13 +98,13 @@ const ContactForm = () => {
                     </svg>
                   </div>
                   <div>
-                    <h5 className='font-semibold text-gray-900 text-sm lg:text-base'>Address</h5>
-                    <p className='text-gray-600 text-sm lg:text-base'>123 Mondilla St, Suite 100</p>
+                    <h5 className='font-semibold text-gray-900 text-sm lg:text-base dark:text-white'>Address</h5>
+                    <p className='text-gray-600 text-sm lg:text-base dark:text-gray-400'>123 Mondilla St, Suite 100</p>
                   </div>
                 </div>
               </div>
               
-              <div className='mt-8 pt-6 border-t border-gray-200'>
+              <div className='mt-8 pt-6 border-t border-gray-200 dark:border-gray-800'>
                 <p className='text-xs lg:text-sm text-gray-500 text-center'>
                   We typically respond within 24 hours
                 </p>

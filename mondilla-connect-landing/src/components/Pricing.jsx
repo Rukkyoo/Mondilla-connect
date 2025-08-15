@@ -24,12 +24,12 @@ const pricing = [
 
 const Pricing = () => {
   return (
-    <div className="bg-[#eaf4ff] flex flex-col items-center px-4 py-10 lg:py-16">
+    <div className="dark:bg-[#0b0b0c] flex flex-col items-center px-4 py-10 lg:py-16">
       <div className="max-w-7xl w-full">
-        <h3 className="text-2xl lg:text-3xl text-center font-bold">
+        <h3 className="text-2xl lg:text-3xl text-center font-bold dark:text-white">
           Simple, transparent pricing
         </h3>
-        <p className="text-center text-gray-600 mt-2 text-sm lg:text-base">
+        <p className="text-center dark:text-gray-400 text-gray-600 mt-2 text-sm lg:text-base">
           Choose a plan that scales with your team.
         </p>
         
@@ -38,10 +38,10 @@ const Pricing = () => {
           {pricing.map((plan) => (
             <div
               key={plan.id}
-              className={`relative p-6 lg:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+              className={`relative p-6 lg:p-8 rounded-xl shadow-lg dark:border-gray-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 plan.popularity 
-                  ? "bg-white border-2 border-blue-500 scale-105 lg:scale-110" 
-                  : "bg-white border border-gray-200"
+                  ? "bg-white border-2 dark:bg-[#141416] border-blue-500 scale-100 lg:scale-100" 
+                  : "bg-white border dark:bg-[#141416] border-gray-200"
               }`}
             >
               {plan.popularity && (
@@ -53,20 +53,20 @@ const Pricing = () => {
               )}
               
               <div className="text-center">
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl dark:text-white lg:text-2xl font-bold text-gray-900 mb-2">
                   {plan.plan}
                 </h3>
                 <div className="mb-6">
-                  <span className="text-3xl lg:text-4xl font-bold text-gray-900">
+                  <span className="text-3xl lg:text-4xl dark:text-white font-bold text-gray-900">
                     {plan.price}
                   </span>
-                  <span className="text-gray-600 text-sm lg:text-base">/user</span>
+                  <span className="text-gray-600 text-sm lg:text-base dark:text-white">/user</span>
                 </div>
               </div>
               
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-start text-gray-600 text-sm lg:text-base">
+                  <li key={index} className="flex items-start dark:text-white text-gray-600 text-sm lg:text-base">
                     <svg 
                       className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" 
                       fill="currentColor" 
@@ -86,8 +86,8 @@ const Pricing = () => {
               <button 
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-sm lg:text-base ${
                   plan.popularity
-                    ? "bg-blue-500 hover:bg-blue-600 text-white shadow-md hover:shadow-lg"
-                    : "bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300"
+                    ? "bg-blue-500 dark:text-black hover:bg-blue-600 text-white shadow-md hover:shadow-lg"
+                    : "bg-gray-100 hover:bg-gray-900 dark:border-gray-800 dark:text-white dark:bg-[#141416] text-gray-900 border border-gray-300"
                 }`}
               >
                 Get Started
