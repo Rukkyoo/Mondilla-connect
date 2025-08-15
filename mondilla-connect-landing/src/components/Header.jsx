@@ -5,7 +5,7 @@ import HamburgerMenu from "./HamburgerMenu";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="bg-[var(--background)] w-full border-b border-gray-200 ">
+    <div className="bg-[var(--background)] w-full border-b border-gray-200 sticky top-0 z-150">
       <div className="flex flex-row justify-between items-center  p-3">
         <span>
           <img src="logo.png" alt="Logo" width={120} />
