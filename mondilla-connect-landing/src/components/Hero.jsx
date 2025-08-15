@@ -3,23 +3,28 @@ import { IoRocketOutline } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center  h-full  text-center">
-      <h1 className="text-4xl mt-10 font-bold">
-        Collaborate faster. Deliver together.
-      </h1>
-      <p className="mt-6 text-gray-600 text-lg px-6">
-        Mondilla Connect centralizes conversations, tasks, and files so teams
-        can move from ideas to impact without the busy work.
-      </p>
-      <button className="bg-blue-400 w-44 mt-5 text-white py-2 px-4 rounded-lg flex items-center justify-center">
-        <IoRocketOutline className="mr-2" />
-        Get Started Free
-      </button>
-      <img
-        src="hero.jpg"
-        alt="Hero-Image"
-        className="mt-8 rounded-lg shadow-lg w-92"
-      />
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-6 items-center h-fit text-center bg-[var(--background)]">
+      <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8 py-10 sm:py-16 lg:text-left lg:items-start lg:px-10 lg:w-[50vw]">
+        <h1 className="text-4xl mt-10 font-bold sm:text-7xl">
+          Collaborate faster. Deliver together.
+        </h1>
+        <p className="mt-6 text-gray-600 text-lg sm:text-lg lg:pr-40">
+          Mondilla Connect centralizes conversations, tasks, and files so teams
+          can move from ideas to impact without the busy work.
+        </p>
+        <button className="bg-blue-400 w-44 mt-6 text-white py-2 px-4 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-500 transition-colors duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base">
+          <IoRocketOutline className="mr-2" />
+          Get Started Free
+        </button>
+      </div>
+      <div>
+        {" "}
+        <img
+          src="hero.jpg"
+          alt="Hero-Image"
+          className="mt-8 rounded-lg shadow-lg w-92 sm:w-[60vw]"
+        />
+      </div>
     </div>
   );
 };
