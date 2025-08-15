@@ -29,7 +29,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white">
+    <div id="features" className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white scroll-mt-24">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8 lg:mb-12">

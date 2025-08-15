@@ -3,7 +3,7 @@ import { IoRocketOutline } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-6 items-center h-fit text-center bg-[var(--background)] transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white pb-10">
+    <div id="home" className="flex flex-col lg:flex-row lg:justify-between lg:gap-6 items-center h-fit text-center bg-[var(--background)] transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white pb-10 scroll-mt-24">
       <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8 py-10 sm:py-16 lg:text-left lg:items-start lg:px-10 lg:w-[50vw]">
         <h1 className="text-4xl mt-10 font-bold sm:text-7xl">
           Collaborate faster. Deliver together.

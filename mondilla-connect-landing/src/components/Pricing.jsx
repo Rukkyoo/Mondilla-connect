@@ -24,7 +24,7 @@ const pricing = [
 
 const Pricing = () => {
   return (
-    <div className="dark:bg-[#0b0b0c] flex flex-col items-center px-4 py-10 lg:py-16">
+    <div id="pricing" className="dark:bg-[#0b0b0c] flex flex-col items-center px-4 py-10 lg:py-16 scroll-mt-24">
       <div className="max-w-7xl w-full">
         <h3 className="text-2xl lg:text-3xl text-center font-bold dark:text-white">
           Simple, transparent pricing
