@@ -17,17 +17,23 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[var(--background)] w-full border-b border-gray-200 dark:border-[#1e293b] sticky top-0 z-50">
+    <header className="bg-[var(--background)] w-full border-b border-gray-200 dark:border-[#1e293b] sticky top-0 z-50">
       <div className="flex flex-row justify-between items-center dark:border-[#1e293b] p-3 dark:bg-[#0b0b0c]">
         <span>
-          {dark ? <img src="logo-white.png" alt="Logo" width={120} /> : <img src="logo.png" alt="Logo" width={120} />}
+          <img
+            src={dark ? "logo-white.png" : "logo.png"}
+            alt="Logo"
+            width={120}
+          />
         </span>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex justify-center items-center space-x-4 p-3">
           <ul className="flex flex-row space-x-4 dark:text-white">
-            <li className="dark:text-white">
-              <a className="dark:text-white" href="#home">Home</a>
+            <li>
+              <a className="dark:text-white" href="#home">
+                Home
+              </a>
             </li>
             <li>
               <a href="#features">Features</a>
@@ -87,7 +93,7 @@ const Header = () => {
           )}
         </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

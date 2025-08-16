@@ -70,7 +70,7 @@ const Features = () => {
             >
               {/* Icon Container */}
               <div className="mb-6">
-                <div className="w-12 h-12 lg:w-14 lg:h-14  bg-blue-50 rounded-xl flex items-center justify-center  hover:to-blue-200 transition-all duration-300 dark:bg-[#0f1724]">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-blue-50 rounded-xl flex items-center justify-center hover:to-blue-200 transition-all duration-300 dark:bg-[#0f1724]">
                   <span className="text-blue-600 text-xl lg:text-2xl group-hover:scale-110 transition-transform duration-300 ">
                     {feature.icon}
                   </span>

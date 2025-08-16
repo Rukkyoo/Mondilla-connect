@@ -189,7 +189,7 @@ const ContactForm = () => {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-[#0f1724] rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-blue-600"
                         fill="none"
@@ -215,7 +215,7 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-[#0f1724] rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-blue-600"
                         fill="none"
@@ -241,7 +241,7 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-[#0f1724] rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-blue-600"
                         fill="none"
