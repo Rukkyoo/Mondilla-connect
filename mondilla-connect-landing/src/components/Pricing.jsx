@@ -24,7 +24,7 @@ const pricing = [
 
 const Pricing = () => {
   return (
-    <div id="pricing" className="dark:bg-[#0b0b0c] flex flex-col items-center px-4 py-10 lg:py-16 scroll-mt-24">
+    <div id="pricing" className="dark:bg-[#0b0b0c] flex flex-col items-center px-4 py-10 lg:py-16 scroll-mt-15">
       <div className="max-w-7xl w-full">
         <h3 className="text-2xl lg:text-3xl text-center font-bold dark:text-white">
           Simple, transparent pricing
@@ -40,7 +40,7 @@ const Pricing = () => {
               key={plan.id}
               className={`relative p-6 lg:p-8 rounded-xl shadow-lg dark:border-gray-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 plan.popularity 
-                  ? "bg-white border-2 dark:bg-[#141416] border-blue-500 scale-100 lg:scale-100" 
+                  ? "bg-white border-3 dark:bg-[#141416] border-green-500 dark:border-green-500 scale-100 lg:scale-100" 
                   : "bg-white border dark:bg-[#141416] border-gray-200"
               }`}
             >

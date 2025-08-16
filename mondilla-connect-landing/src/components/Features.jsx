@@ -29,7 +29,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div id="features" className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white scroll-mt-24">
+    <div id="features" className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white scroll-mt-15">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8 lg:mb-12">
@@ -50,7 +50,7 @@ const Features = () => {
             >
               {/* Icon Container */}
               <div className="mb-6">
-                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300 dark:bg-[#0f1724]">
+                <div className="w-12 h-12 lg:w-14 lg:h-14  bg-blue-50 rounded-xl flex items-center justify-center  hover:to-blue-200 transition-all duration-300 dark:bg-[#0f1724]">
                   <span className="text-blue-600 text-xl lg:text-2xl group-hover:scale-110 transition-transform duration-300 ">
                     {feature.icon}
                   </span>
