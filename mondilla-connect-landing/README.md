@@ -30,6 +30,7 @@ Mondilla Connect is a landing page built using React, Vite, and Tailwind CSS. Th
 
 * The project uses `localStorage` to store user preferences, such as dark mode.
 * The project uses `react-icons` for icons.
+* The project uses `motion` for animations.
 * The project uses `globals` for global variables.
 * The project uses `eslint-plugin-react-hooks` for React Hooks linting.
 

@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[var(--background)] flex flex-col">
+    <div className=" flex flex-col">
       <Header />
       <Hero />
       <Features />

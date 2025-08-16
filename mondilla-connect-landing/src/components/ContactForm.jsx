@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "motion/react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -48,24 +49,37 @@ const ContactForm = () => {
     }
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   return (
-    <div
+    <section
       id="contact"
+      ref={ref}
       className="bg-[var(--background)] px-4 py-10 lg:py-16 dark:bg-[#0b0b0c] scroll-mt-15"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8 lg:mb-12">
+        <motion.div
+          className="text-center mb-8 lg:mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.1 }}
+        >
           <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 dark:text-white">
             Contact us
           </h3>
           <p className="text-gray-600 text-sm lg:text-base dark:text-gray-400">
             Have questions? We're here to help.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
-          <div className="order-2 lg:order-1">
+          <motion.div
+            className="order-2 lg:order-1"
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
             <form
               onSubmit={handleSubmit}
               className="bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 dark:bg-[#141416]"
@@ -158,10 +172,15 @@ const ContactForm = () => {
                 )}
               </div>
             </form>
-          </div>
+          </motion.div>
 
           {/* Contact Information */}
-          <div className="order-1 lg:order-2">
+          <motion.div
+            className="order-1 lg:order-2"
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.5 }}
+          >
             <div className="order-1 lg:order-2">
               <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 lg:p-8 h-fit dark:bg-[#141416] dark:border-gray-800">
                 <h4 className="text-lg lg:text-xl font-bold text-gray-900 mb-6 dark:text-white">
@@ -261,10 +280,10 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
