@@ -1,16 +1,49 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Prevent FART with immediate CSS variables */
 :root {
-  --background: #f6fbff;
+  --bg-primary: #f6fbff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f8fafc;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --border-primary: #e5e7eb;
+  --border-secondary: #d1d5db;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root.dark {
+  --bg-primary: #0b0b0c;
+  --bg-secondary: #141416;
+  --bg-tertiary: #1f1f23;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --border-primary: #374151;
+  --border-secondary: #4b5563;
+}
+
+/* Apply theme immediately to prevent flash */
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: none; /* Remove transition to prevent flash */
+}
+
 #root {
   margin: auto;
+  background-color: var(--bg-primary);
 }
 
 /* Custom utilities for hamburger menu animations */
@@ -19,8 +52,44 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* body.dark {
-  --background: #18181b;
-  background: #18181b;
-  color: #f3f4f6;
-} */
+/* Custom utility for navigation link hover underlines */
+@utility nav-link-underline {
+  position: relative;
+  display: inline-block;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Utility classes for consistent theming */
+@utility theme-bg-primary {
+  background-color: var(--bg-primary);
+}
+
+@utility theme-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+@utility theme-text-primary {
+  color: var(--text-primary);
+}
+
+@utility theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+@utility theme-border-primary {
+  border-color: var(--border-primary);
+}

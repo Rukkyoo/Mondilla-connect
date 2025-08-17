@@ -55,7 +55,7 @@ const ContactForm = () => {
     <section
       id="contact"
       ref={ref}
-      className="bg-[var(--background)] px-4 py-10 lg:py-16 dark:bg-[#0b0b0c] scroll-mt-15"
+      className="bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-10 lg:py-16 scroll-mt-15"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -64,10 +64,10 @@ const ContactForm = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 dark:text-white">
+          <h3 className="text-2xl lg:text-3xl font-bold text-[var(--text-primary)] mb-2">
             Contact us
           </h3>
-          <p className="text-gray-600 text-sm lg:text-base dark:text-gray-400">
+          <p className="text-[var(--text-secondary)] text-sm lg:text-base">
             Have questions? We're here to help.
           </p>
         </motion.div>
@@ -82,20 +82,20 @@ const ContactForm = () => {
           >
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 dark:bg-[#141416]"
+              className="bg-[var(--bg-secondary)] p-6 lg:p-8 rounded-xl shadow-lg border border-[var(--border-primary)]"
             >
               <div className="space-y-6">
                 {/* Name */}
                 <div>
                   <label
-                    className="block text-sm font-semibold text-gray-700 mb-2 dark:text-white"
+                    className="block text-sm font-semibold text-[var(--text-primary)] mb-2"
                     htmlFor="name"
                   >
                     Name *
                   </label>
                   <input
-                    className={`w-full dark:border-gray-800 dark:text-white px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200 text-sm lg:text-base ${
-                      errors.name ? "border-red-500" : "border-gray-300"
+                    className={`w-full bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200 text-sm lg:text-base ${
+                      errors.name ? "border-red-500" : "border-[var(--border-primary)]"
                     }`}
                     type="text"
                     id="name"
@@ -111,14 +111,14 @@ const ContactForm = () => {
                 {/* Email */}
                 <div>
                   <label
-                    className="block dark:text-white text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-[var(--text-primary)] mb-2"
                     htmlFor="email"
                   >
                     Email *
                   </label>
                   <input
-                    className={`w-full dark:border-gray-800 dark:text-white px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200 text-sm lg:text-base ${
-                      errors.email ? "border-red-500" : "border-gray-300"
+                    className={`w-full bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200 text-sm lg:text-base ${
+                      errors.email ? "border-red-500" : "border-[var(--border-primary)]"
                     }`}
                     type="email"
                     id="email"
@@ -134,14 +134,14 @@ const ContactForm = () => {
                 {/* Message */}
                 <div>
                   <label
-                    className="block dark:text-white text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-[var(--text-primary)] mb-2"
                     htmlFor="message"
                   >
                     Message *
                   </label>
                   <textarea
-                    className={`w-full dark:border-gray-800 dark:text-white px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200 resize-none text-sm lg:text-base ${
-                      errors.message ? "border-red-500" : "border-gray-300"
+                    className={`w-full bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200 resize-none text-sm lg:text-base ${
+                      errors.message ? "border-red-500" : "border-[var(--border-primary)]"
                     }`}
                     id="message"
                     rows="5"
@@ -158,7 +158,7 @@ const ContactForm = () => {
 
                 {/* Submit */}
                 <button
-                  className="w-full bg-blue-500 dark:text-black hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base"
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base"
                   type="submit"
                 >
                   Send Message
@@ -182,14 +182,14 @@ const ContactForm = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
           >
             <div className="order-1 lg:order-2">
-              <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 lg:p-8 h-fit dark:bg-[#141416] dark:border-gray-800">
-                <h4 className="text-lg lg:text-xl font-bold text-gray-900 mb-6 dark:text-white">
+              <div className="bg-[var(--bg-secondary)] rounded-xl shadow-lg border border-[var(--border-primary)] p-6 lg:p-8 h-fit">
+                <h4 className="text-lg lg:text-xl font-bold text-[var(--text-primary)] mb-6">
                   Get in touch
                 </h4>
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-[#0f1724] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-blue-600"
                         fill="none"
@@ -205,17 +205,17 @@ const ContactForm = () => {
                       </svg>
                     </div>
                     <div>
-                      <h5 className="font-semibold text-gray-900 text-sm lg:text-base dark:text-white">
+                      <h5 className="font-semibold text-[var(--text-primary)] text-sm lg:text-base">
                         Email
                       </h5>
-                      <p className="text-gray-600 text-sm lg:text-base dark:text-gray-400">
+                      <p className="text-[var(--text-secondary)] text-sm lg:text-base">
                         support@mondilla.com
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-[#0f1724] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-blue-600"
                         fill="none"
@@ -231,17 +231,17 @@ const ContactForm = () => {
                       </svg>
                     </div>
                     <div>
-                      <h5 className="font-semibold text-gray-900 text-sm lg:text-base dark:text-white">
+                      <h5 className="font-semibold text-[var(--text-primary)] text-sm lg:text-base">
                         Phone
                       </h5>
-                      <p className="text-gray-600 text-sm lg:text-base dark:text-gray-400">
+                      <p className="text-[var(--text-secondary)] text-sm lg:text-base">
                         +1 (555) 123-4567
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-[#0f1724] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-blue-600"
                         fill="none"
@@ -263,18 +263,18 @@ const ContactForm = () => {
                       </svg>
                     </div>
                     <div>
-                      <h5 className="font-semibold text-gray-900 text-sm lg:text-base dark:text-white">
+                      <h5 className="font-semibold text-[var(--text-primary)] text-sm lg:text-base">
                         Address
                       </h5>
-                      <p className="text-gray-600 text-sm lg:text-base dark:text-gray-400">
+                      <p className="text-[var(--text-secondary)] text-sm lg:text-base">
                         123 Mondilla St, Suite 100
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
-                  <p className="text-xs lg:text-sm text-gray-500 text-center">
+                <div className="mt-8 pt-6 border-t border-[var(--border-primary)]">
+                  <p className="text-xs lg:text-sm text-[var(--text-tertiary)] text-center">
                     We typically respond within 24 hours
                   </p>
                 </div>

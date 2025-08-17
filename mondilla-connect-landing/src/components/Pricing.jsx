@@ -31,11 +31,11 @@ const Pricing = () => {
     <section
       id="pricing"
       ref={ref}
-      className="dark:bg-[#0b0b0c] flex flex-col items-center px-4 py-10 lg:py-16 scroll-mt-15"
+      className="bg-[var(--bg-primary)] text-[var(--text-primary)] flex flex-col items-center px-4 py-10 lg:py-16 scroll-mt-15"
     >
       <div className="max-w-7xl w-full">
         <motion.h3
-          className="text-2xl lg:text-3xl text-center font-bold dark:text-white"
+          className="text-2xl lg:text-3xl text-center font-bold text-[var(--text-primary)]"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -43,7 +43,7 @@ const Pricing = () => {
           Simple, transparent pricing
         </motion.h3>
         <motion.p
-          className="text-center dark:text-gray-400 text-gray-600 mt-2 text-sm lg:text-base"
+          className="text-center text-[var(--text-secondary)] mt-2 text-sm lg:text-base"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -60,10 +60,10 @@ const Pricing = () => {
           {pricing.map((plan, i) => (
             <motion.div
               key={plan.id}
-              className={`relative p-6 lg:p-8 rounded-xl shadow-lg dark:border-gray-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+              className={`relative p-6 lg:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 plan.popularity
-                  ? "bg-white border-3 dark:bg-[#141416] border-green-500 dark:border-green-500 scale-100 lg:scale-100"
-                  : "bg-white border dark:bg-[#141416] border-gray-200"
+                  ? "bg-[var(--bg-secondary)] border-2 border-green-500 scale-100 lg:scale-100"
+                  : "bg-[var(--bg-secondary)] border border-[var(--border-primary)]"
               }`}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -77,14 +77,14 @@ const Pricing = () => {
                 </div>
               )}
               <div className="text-center">
-                <h3 className="text-xl dark:text-white lg:text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl lg:text-2xl font-bold text-[var(--text-primary)] mb-2">
                   {plan.plan}
                 </h3>
                 <div className="mb-6">
-                  <span className="text-3xl lg:text-4xl dark:text-white font-bold text-gray-900">
+                  <span className="text-3xl lg:text-4xl font-bold text-[var(--text-primary)]">
                     {plan.price}
                   </span>
-                  <span className="text-gray-600 text-sm lg:text-base dark:text-white">
+                  <span className="text-[var(--text-secondary)] text-sm lg:text-base">
                     /user
                   </span>
                 </div>
@@ -93,7 +93,7 @@ const Pricing = () => {
                 {plan.features.map((feature, index) => (
                   <li
                     key={index}
-                    className="flex items-start dark:text-white text-gray-600 text-sm lg:text-base"
+                    className="flex items-start text-[var(--text-secondary)] text-sm lg:text-base"
                   >
                     <svg
                       className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
@@ -113,8 +113,8 @@ const Pricing = () => {
               <button
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-sm lg:text-base ${
                   plan.popularity
-                    ? "bg-blue-500 dark:text-black hover:bg-blue-600 text-white shadow-md hover:shadow-lg"
-                    : "bg-gray-100 hover:bg-gray-900 dark:border-gray-800 dark:text-white dark:bg-[#141416] text-gray-900 border border-gray-300"
+                    ? "bg-blue-500 hover:bg-blue-600 text-white shadow-md hover:shadow-lg"
+                    : "bg-[var(--bg-tertiary)] hover:bg-[var(--bg-primary)] text-[var(--text-primary)] border border-[var(--border-primary)]"
                 }`}
               >
                 Get Started

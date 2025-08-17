@@ -35,7 +35,7 @@ const Features = () => {
     <section
       id="features"
       ref={ref}
-      className="bg-[var(--background)] px-4 py-10 lg:py-16 z-10 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c] dark:text-white scroll-mt-15"
+      className="bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-10 lg:py-16 z-10 scroll-mt-15"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
@@ -45,17 +45,17 @@ const Features = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3 dark:text-white">
+          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[var(--text-primary)] mb-3">
             Everything your team needs
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base xl:text-lg max-w-2xl mx-auto">
+          <p className="text-[var(--text-secondary)] text-sm lg:text-base xl:text-lg max-w-2xl mx-auto">
             Plan, discuss, and ship in one place.
           </p>
         </motion.div>
 
         {/* Features Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 transition-all duration-300 ease-in-out dark:bg-[#0b0b0c]  dark:text-white"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -63,14 +63,14 @@ const Features = () => {
           {features.map((feature, i) => (
             <motion.div
               key={feature.id}
-              className="bg-white p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 dark:bg-[#141416] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+              className="bg-[var(--bg-secondary)] p-6 lg:p-8 rounded-xl shadow-lg border border-[var(--border-primary)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + i * 0.15 }}
             >
               {/* Icon Container */}
               <div className="mb-6">
-                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-blue-50 rounded-xl flex items-center justify-center hover:to-blue-200 transition-all duration-300 dark:bg-[#0f1724]">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all duration-300">
                   <span className="text-blue-600 text-xl lg:text-2xl group-hover:scale-110 transition-transform duration-300 ">
                     {feature.icon}
                   </span>
@@ -79,16 +79,16 @@ const Features = () => {
 
               {/* Content */}
               <div className="space-y-3">
-                <h3 className="text-lg lg:text-xl dark:text-white font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-lg lg:text-xl font-bold text-[var(--text-primary)] group-hover:text-blue-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base leading-relaxed">
+                <p className="text-[var(--text-secondary)] text-sm lg:text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>
 
               {/* Learn More Link */}
-              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-800">
+              <div className="mt-6 pt-4 border-t border-[var(--border-primary)]">
                 <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm lg:text-base flex items-center group-hover:translate-x-1 transition-all duration-300">
                   Learn more
                   <svg
@@ -112,19 +112,19 @@ const Features = () => {
 
         {/* Bottom CTA Section */}
         <motion.div
-          className="text-center mt-12 lg:mt-16 dark:bg-[#141416]"
+          className="text-center mt-12 lg:mt-16"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.7, delay: 0.7 }}
         >
-          <div className=" rounded-2xl p-6 lg:p-8 border dark:border-gray-800 border-blue-100  dark:bg-[#141416]">
-            <h3 className="text-lg dark:text-white lg:text-xl font-bold text-gray-900 mb-2">
+          <div className="bg-[var(--bg-secondary)] rounded-2xl p-6 lg:p-8 border border-[var(--border-primary)]">
+            <h3 className="text-lg lg:text-xl font-bold text-[var(--text-primary)] mb-2">
               Ready to get started?
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base mb-6">
+            <p className="text-[var(--text-secondary)] text-sm lg:text-base mb-6">
               Join thousands of teams already using Mondilla Connect
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 dark:text-black text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base">
               Start Free Trial
             </button>
           </div>
