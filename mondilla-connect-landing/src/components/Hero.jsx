@@ -4,12 +4,13 @@ import { IoRocketOutline } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <motion.div
+    <motion.section
       id="home"
       className="flex flex-col lg:flex-row lg:justify-between lg:gap-6 items-center h-fit text-center bg-[var(--bg-primary)] text-[var(--text-primary)] pb-10 scroll-mt-24"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
+      aria-label="Hero section"
     >
       <motion.div
         className="flex flex-col items-center justify-center text-center px-4 sm:px-8 py-10 sm:py-16 lg:text-left lg:items-start lg:px-10 lg:w-[50vw]"
@@ -52,14 +53,14 @@ const Hero = () => {
       >
         <motion.img
           src="hero.jpg"
-          alt="Hero-Image"
+          alt="Team collaboration dashboard showing task management, file sharing, and communication features in Mondilla Connect"
           className="mt-8 rounded-lg border-2 border-[var(--border-primary)] shadow-lg w-92 sm:w-[60vw] lg:mr-20"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
         />
       </motion.div>
-    </motion.div>
+      </motion.section>
   );
 };
 
